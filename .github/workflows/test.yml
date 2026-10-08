@@ -8,9 +8,10 @@ env:
   First_Name: lee
   Greeting: Hello
   API_BASE: ${{ vars.API_BASE }}
+  KEY: ${{vars.KEY}}
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!, $API_BASE"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!, $API_BASE, $KEY"
